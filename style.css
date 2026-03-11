@@ -1,0 +1,426 @@
+/* Google Fonts Imported in HTML */
+:root {
+    --primary-color: #0056b3; 
+    --primary-light: #0d6efd;
+    --primary-dark: #003d82;
+    --secondary-color: #f8f9fa;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --bg-light: #f1f5f9;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --border-radius: 1rem;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--secondary-color);
+}
+
+/* Base Overrides for Premium feel */
+.btn-primary {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.text-primary {
+    color: var(--primary-light) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-light) !important;
+}
+
+/* Utilities */
+.letter-spacing-1 {
+    letter-spacing: 1.5px;
+}
+
+.heading-underline {
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-light);
+    border-radius: 2px;
+}
+
+.btn-hover-effect {
+    transition: var(--transition);
+}
+
+.btn-hover-effect:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Navbar */
+.navbar {
+    transition: var(--transition);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+.navbar.navbar-scrolled {
+    box-shadow: var(--shadow-md) !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+.nav-logo {
+    width: 45px;
+    height: auto;
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-light);
+}
+
+/* Underline animation on hover */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-light);
+    transition: var(--transition);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+.custom-toggler {
+    background-color: var(--primary-light) !important;
+    color: white !important;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.custom-toggler i {
+    color: white !important;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 30, 80, 0.8), rgba(0, 30, 80, 0.4)), url('assets/images/hero.png') center/cover no-repeat fixed;
+    position: relative;
+    padding-top: 80px; 
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0,0,0,0.02) !important;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.icon-wrapper {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.dashboard-card:hover .icon-wrapper {
+    transform: scale(1.1);
+}
+
+/* Doctors Section */
+.doctor-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.02) !important;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.8s ease;
+}
+
+.doctor-card:hover .card-img-top {
+    transform: scale(1.08);
+}
+
+.social-overlay {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.8) 70%, transparent);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 15px 15px;
+    transition: var(--transition);
+}
+
+.doctor-card:hover .social-overlay {
+    bottom: 0;
+}
+
+.social-overlay a {
+    color: white;
+    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.social-overlay a:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+/* Form Styles */
+.form-card {
+    border-radius: var(--border-radius);
+}
+
+.form-floating > .form-control,
+.form-floating > .form-select {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    border-color: var(--primary-light);
+}
+
+/* Custom Table */
+.table-card {
+    border-radius: var(--border-radius);
+}
+
+.custom-table {
+    white-space: nowrap;
+}
+
+.custom-table th {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.custom-table td {
+    padding: 1.25rem 0.5rem;
+    vertical-align: middle;
+}
+
+.custom-table tbody tr {
+    transition: var(--transition);
+}
+
+.custom-table tbody tr:hover {
+    background-color: var(--bg-light);
+}
+
+/* Appointment Section */
+.appointment-section {
+    background: url('assets/images/hero.png') center/cover no-repeat fixed;
+}
+
+.appointment-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 110, 253, 0.9); /* Primary color overlay */
+}
+
+.appointment-card {
+    transition: var(--transition);
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* Services */
+.service-card {
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.02) !important;
+}
+
+.service-card * {
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg) !important;
+    background-color: var(--primary-light) !important;
+}
+
+.service-card:hover .text-muted,
+.service-card:hover h4 {
+    color: white !important;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card:hover .service-icon {
+    background-color: rgba(255,255,255,0.2) !important;
+    color: white !important;
+}
+
+/* Contacts */
+.icon-box {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: var(--transition);
+}
+
+.contact-item {
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+.contact-item:hover .icon-box {
+    background-color: var(--primary-light) !important;
+    color: white !important;
+}
+
+.map-card {
+    position: relative;
+}
+
+/* Footer Links */
+.footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+    transform: translateY(-4px);
+    background-color: var(--primary-light);
+    color: white;
+    border-color: var(--primary-light);
+}
+
+.hover-white:hover {
+    color: white !important;
+}
+
+.placeholder-light::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Responsive Overrides */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow-md);
+        margin-top: 1rem;
+        position: absolute;
+        width: calc(100% - 1.5rem);
+        left: 0.75rem;
+        top: 100%;
+    }
+    .navbar-nav .nav-link::after {
+        display: none;
+    }
+    .hero-section {
+        background-attachment: scroll; /* better for mobile */
+    }
+    .appointment-section {
+        background-attachment: scroll;
+    }
+}
