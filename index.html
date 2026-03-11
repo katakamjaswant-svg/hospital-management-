@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Premium Hospital Management</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="MediCare Hospital Management System ensuring premium healthcare and patient management.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="assets/images/logo.png" alt="MediCare Logo" class="nav-logo me-2">
+                <span class="fw-bold brand-text">MediCare</span>
+            </a>
+            <button class="navbar-toggler custom-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-3 py-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doctors">Doctors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#patients">Patients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#appointments">Appointments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="d-none d-lg-block ms-lg-3">
+                    <a href="#appointments" class="btn btn-primary rounded-pill px-4" id="navBookBtn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home/Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-7 text-white hero-content">
+                    <span
+                        class="badge bg-primary text-white rounded-pill mb-3 px-3 py-2 text-uppercase letter-spacing-1 shadow-sm border border-light border-opacity-25">Premium
+                        Healthcare</span>
+                    <h1 class="display-3 fw-bold mb-4 pe-lg-5">Exceptional Care, <br>Every Single Day</h1>
+                    <p class="lead mb-5 text-light opacity-75 pe-lg-5">MediCare is dedicated to providing world-class
+                        medical services with a modern approach to patient management. Experience healthcare redefined
+                        for you and your family.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#appointments"
+                            class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg fw-medium btn-hover-effect">Book
+                            Appointment <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="#services"
+                            class="btn btn-outline-light btn-lg rounded-pill px-5 fw-medium btn-hover-effect">Our
+                            Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Cards Section -->
+    <section id="dashboard" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Overview</h6>
+                <h2 class="fw-bold display-6 mb-3">Hospital Dashboard</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-white border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-primary bg-opacity-10 text-primary mb-4 mx-auto">
+                                <i class="fas fa-user-md fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold counter mb-1 text-dark">124</h3>
+                            <p class="text-muted fw-medium mb-0">Total Doctors</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-white border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-success bg-opacity-10 text-success mb-4 mx-auto">
+                                <i class="fas fa-users fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold counter mb-1 text-dark">8,459</h3>
+                            <p class="text-muted fw-medium mb-0">Total Patients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-white border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-warning bg-opacity-10 text-warning mb-4 mx-auto">
+                                <i class="fas fa-calendar-check fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold counter mb-1 text-dark">342</h3>
+                            <p class="text-muted fw-medium mb-0">Appointments Today</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-white border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-info bg-opacity-10 text-info mb-4 mx-auto">
+                                <i class="fas fa-bed fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold counter mb-1 text-dark">56</h3>
+                            <p class="text-muted fw-medium mb-0">Available Beds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Our Specialists</h6>
+                <h2 class="fw-bold display-6 mb-3">Meet Our Doctors</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card doctor-card border-0 shadow-sm h-100 bg-white">
+                        <div class="img-container">
+                            <img src="assets/images/doctor1.png" class="card-img-top" alt="Dr. Michael Evans">
+                            <div class="social-overlay">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold mb-1">Dr. Michael Evans</h4>
+                            <p class="text-primary fw-medium mb-3">Cardiology</p>
+                            <p class="text-muted small mb-4 px-2">Expert in cardiovascular health and interventional
+                                procedures with a patient-first approach.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-4 text-muted small px-3">
+                                <span><i class="fas fa-star text-warning me-1"></i> 4.9</span>
+                                <span><i class="fas fa-briefcase me-1"></i> 15+ Yrs</span>
+                            </div>
+                            <button class="btn btn-outline-primary rounded-pill w-100 fw-medium">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card doctor-card border-0 shadow-sm h-100 bg-white">
+                        <div class="img-container">
+                            <img src="assets/images/doctor2.png" class="card-img-top" alt="Dr. Sarah Jenkins">
+                            <div class="social-overlay">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold mb-1">Dr. S. Jenkins</h4>
+                            <p class="text-primary fw-medium mb-3">Pediatrics</p>
+                            <p class="text-muted small mb-4 px-2">Dedicated pediatrician providing compassionate care
+                                for children from infancy to adolescence.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-4 text-muted small px-3">
+                                <span><i class="fas fa-star text-warning me-1"></i> 4.8</span>
+                                <span><i class="fas fa-briefcase me-1"></i> 10+ Yrs</span>
+                            </div>
+                            <button class="btn btn-outline-primary rounded-pill w-100 fw-medium">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card doctor-card border-0 shadow-sm h-100 bg-white">
+                        <div class="img-container">
+                            <img src="assets/images/doctor3.png" class="card-img-top" alt="Dr. Arthur Vance">
+                            <div class="social-overlay">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold mb-1">Dr. Arthur Vance</h4>
+                            <p class="text-primary fw-medium mb-3">Neurology</p>
+                            <p class="text-muted small mb-4 px-2">Renowned neurologist specializing in complex
+                                neurological disorders and advanced treatments.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-4 text-muted small px-3">
+                                <span><i class="fas fa-star text-warning me-1"></i> 5.0</span>
+                                <span><i class="fas fa-briefcase me-1"></i> 20+ Yrs</span>
+                            </div>
+                            <button class="btn btn-outline-primary rounded-pill w-100 fw-medium">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Management Section -->
+    <section id="patients" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Administration</h6>
+                <h2 class="fw-bold display-6 mb-3">Patient Management</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+
+            <div class="row align-items-start g-4 g-lg-5">
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm form-card bg-white position-relative overflow-hidden">
+                        <div class="position-absolute top-0 start-0 w-100 bg-primary" style="height: 5px;"></div>
+                        <div class="card-body p-4 p-md-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3 text-primary">
+                                    <i class="fas fa-user-plus fa-lg"></i>
+                                </div>
+                                <h4 class="fw-bold mb-0">Add New Patient</h4>
+                            </div>
+                            <form id="addPatientForm" class="needs-validation" novalidate>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="patientName" placeholder="Patient Name"
+                                        required>
+                                    <label for="patientName">Patient Name</label>
+                                    <div class="invalid-feedback">Please enter the patient's name.</div>
+                                </div>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="patientAge" placeholder="Age"
+                                                min="0" required>
+                                            <label for="patientAge">Age</label>
+                                            <div class="invalid-feedback">Valid age required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="patientGender" required>
+                                                <option value="" disabled selected>Select...</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                            <label for="patientGender">Gender</label>
+                                            <div class="invalid-feedback">Select gender.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" id="patientContact"
+                                        placeholder="Contact Number" required pattern="^[0-9\-\+\s\(\)]{7,15}$">
+                                    <label for="patientContact">Contact Number</label>
+                                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="patientCondition"
+                                        placeholder="Disease / Condition" required>
+                                    <label for="patientCondition">Disease / Condition</label>
+                                    <div class="invalid-feedback">Please specify the condition.</div>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-primary w-100 rounded-pill py-3 shadow-sm fw-bold fs-6 btn-hover-effect">
+                                    <i class="fas fa-plus me-2"></i> Register Patient
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm h-100 table-card bg-white position-relative overflow-hidden">
+                        <div class="card-body p-4 p-md-5">
+                            <div
+                                class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+                                <h4 class="fw-bold mb-0"><i class="fas fa-users text-primary me-2"></i>Recent Patients
+                                </h4>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-middle custom-table mb-0">
+                                    <thead class="text-uppercase bg-light text-muted small fw-bold letter-spacing-1">
+                                        <tr>
+                                            <th class="ps-3 border-0 rounded-start">ID</th>
+                                            <th class="border-0">Name</th>
+                                            <th class="border-0">Age/Sex</th>
+                                            <th class="border-0">Contact</th>
+                                            <th class="border-0">Condition</th>
+                                            <th class="pe-3 border-0 rounded-end">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="patientTableBody" class="border-top-0">
+                                        <tr>
+                                            <td class="text-muted fw-medium ps-3">#PT-001</td>
+                                            <td class="fw-bold text-dark">John Doe</td>
+                                            <td class="text-muted">45/M</td>
+                                            <td class="text-muted">+1 234-567-8900</td>
+                                            <td class="text-muted">Hypertension</td>
+                                            <td class="pe-3"><span
+                                                    class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-2 border border-success border-opacity-10 fw-medium">Admitted</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted fw-medium ps-3">#PT-002</td>
+                                            <td class="fw-bold text-dark">Jane Smith</td>
+                                            <td class="text-muted">32/F</td>
+                                            <td class="text-muted">+1 987-654-3210</td>
+                                            <td class="text-muted">Asthma</td>
+                                            <td class="pe-3"><span
+                                                    class="badge bg-warning bg-opacity-10 text-warning rounded-pill px-3 py-2 border border-warning border-opacity-10 fw-medium">Observation</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted fw-medium ps-3">#PT-003</td>
+                                            <td class="fw-bold text-dark">Robert Johnson</td>
+                                            <td class="text-muted">58/M</td>
+                                            <td class="text-muted">+1 555-123-4567</td>
+                                            <td class="text-muted">Diabetes</td>
+                                            <td class="pe-3"><span
+                                                    class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 border border-info border-opacity-10 fw-medium">Discharged</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="appointments" class="py-5 appointment-section text-white position-relative">
+        <div class="appointment-overlay"></div>
+        <div class="container py-lg-5 position-relative z-1">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center mb-5">
+                    <span
+                        class="badge bg-white text-primary rounded-pill mb-3 px-3 py-2 fw-bold text-uppercase letter-spacing-1">Consultation</span>
+                    <h2 class="fw-bold display-5 mb-3">Book an Appointment Online</h2>
+                    <p class="lead opacity-75 mb-0">Schedule a consultation with our experts in just a few clicks. Fast,
+                        secure, and hassle-free.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10">
+                    <div class="card border-0 shadow-lg bg-white text-dark appointment-card rounded-4 overflow-hidden">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="appointmentForm" class="needs-validation" novalidate>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control bg-light border-0" id="apptName"
+                                                placeholder="Patient Name" required>
+                                            <label for="apptName"><i class="far fa-user text-primary me-2"></i>Patient
+                                                Name</label>
+                                            <div class="invalid-feedback">Please enter your name.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select bg-light border-0" id="apptDoctor" required>
+                                                <option value="" disabled selected>Choose Doctor...</option>
+                                                <option value="Dr. Michael Evans">Dr. Michael Evans - Cardiology
+                                                </option>
+                                                <option value="Dr. S. Jenkins">Dr. S. Jenkins - Pediatrics</option>
+                                                <option value="Dr. Arthur Vance">Dr. Arthur Vance - Neurology</option>
+                                            </select>
+                                            <label for="apptDoctor"><i
+                                                    class="fas fa-stethoscope text-primary me-2"></i>Select
+                                                Doctor</label>
+                                            <div class="invalid-feedback">Please select a doctor.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control bg-light border-0" id="apptDate"
+                                                placeholder="Date" required>
+                                            <label for="apptDate"><i
+                                                    class="far fa-calendar-alt text-primary me-2"></i>Preferred
+                                                Date</label>
+                                            <div class="invalid-feedback">Please choose a date.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select bg-light border-0" id="apptTime" required>
+                                                <option value="" disabled selected>Select Time Slot...</option>
+                                                <option value="09:00 AM">09:00 AM - 10:00 AM</option>
+                                                <option value="10:30 AM">10:30 AM - 11:30 AM</option>
+                                                <option value="01:00 PM">01:00 PM - 02:00 PM</option>
+                                                <option value="03:00 PM">03:00 PM - 04:00 PM</option>
+                                            </select>
+                                            <label for="apptTime"><i class="far fa-clock text-primary me-2"></i>Time
+                                                Slot</label>
+                                            <div class="invalid-feedback">Please select a time slot.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-5 text-center">
+                                        <button type="submit"
+                                            class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm w-100 fw-bold fs-5 btn-hover-effect">Confirm
+                                            Appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Departments</h6>
+                <h2 class="fw-bold display-6 mb-3">Our Premium Services</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-primary bg-opacity-10 text-primary">
+                            <i class="fas fa-ambulance fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Emergency Care</h4>
+                        <p class="text-muted mb-0">24/7 rapid response emergency medical care equipped with advanced
+                            life support systems.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-info bg-opacity-10 text-info">
+                            <i class="fas fa-microscope fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Laboratory</h4>
+                        <p class="text-muted mb-0">High-tech diagnostic laboratory delivering precise and rapid results
+                            for all tests.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-success bg-opacity-10 text-success">
+                            <i class="fas fa-pills fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Pharmacy</h4>
+                        <p class="text-muted mb-0">Fully stocked in-house pharmacy providing authentic medications round
+                            the clock.</p>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-warning bg-opacity-10 text-warning">
+                            <i class="fas fa-procedures fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Surgery</h4>
+                        <p class="text-muted mb-0">State-of-the-art operation theaters for minimally invasive and
+                            complex surgical procedures.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-danger bg-opacity-10 text-danger">
+                            <i class="fas fa-heartbeat fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Intensive Care</h4>
+                        <p class="text-muted mb-0">Dedicated intensive care unit providing specialized monitoring and
+                            life-saving treatments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5 d-lg-none">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Reach Out</h6>
+                <h2 class="fw-bold display-6 mb-3">Contact Us</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="d-none d-lg-block">
+                        <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Reach Out</h6>
+                        <h2 class="fw-bold display-5 mb-4">Contact Us</h2>
+                        <div class="heading-underline mb-5"></div>
+                    </div>
+
+                    <p class="text-muted mb-5 lead fs-6">Have any questions or need immediate assistance? Get in touch
+                        with our helpdesk team available 24/7.</p>
+
+                    <div
+                        class="d-flex align-items-center mb-4 pb-2 contact-item bg-white p-3 rounded-3 shadow-sm border border-light">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary me-4 flex-shrink-0 shadow-sm">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Hospital Address</h5>
+                            <p class="text-muted mb-0 small">123 Wellness Way, Medical District<br>New York, NY 10001
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="d-flex align-items-center mb-4 pb-2 contact-item bg-white p-3 rounded-3 shadow-sm border border-light">
+                        <div class="icon-box bg-success bg-opacity-10 text-success me-4 flex-shrink-0 shadow-sm">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Emergency Phone</h5>
+                            <p class="text-muted mb-0 small">+1 (800) 123-4567<br>+1 (800) 987-6543</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="d-flex align-items-center contact-item bg-white p-3 rounded-3 shadow-sm border border-light">
+                        <div class="icon-box bg-info bg-opacity-10 text-info me-4 flex-shrink-0 shadow-sm">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Email Support</h5>
+                            <p class="text-muted mb-0 small">info@medicare.com<br>support@medicare.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 order-1 order-lg-2">
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 map-card">
+                        <!-- Google Maps Embed -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.1583091352!2d-74.11976373946231!3d40.69766374859258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1697230485608!5m2!1sen!2s"
+                            width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <div class="container pt-4">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-6 pe-lg-5">
+                    <a class="d-flex align-items-center mb-4 text-white text-decoration-none" href="#home">
+                        <img src="assets/images/logo.png" alt="MediCare Logo" width="45" height="45"
+                            class="me-2 bg-white rounded-circle p-1 shadow-sm">
+                        <span class="fw-bold fs-3">MediCare</span>
+                    </a>
+                    <p class="text-light opacity-75 mb-4 pe-lg-4">Dedicated to providing premium healthcare services
+                        with compassion and excellence. Your health is our priority.</p>
+                    <div class="d-flex gap-3 social-icons mt-4">
+                        <a href="#" class="btn btn-outline-light rounded-circle btn-sm"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle btn-sm"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle btn-sm"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle btn-sm"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4 text-uppercase letter-spacing-1 fs-6 text-white">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-3"><a href="#home"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Home</a></li>
+                        <li class="mb-3"><a href="#doctors"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Our Doctors</a></li>
+                        <li class="mb-3"><a href="#services"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Services</a></li>
+                        <li class="mb-3"><a href="#appointments"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Book Appointment</a></li>
+                        <li class="mb-3"><a href="#contact"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 text-uppercase letter-spacing-1 fs-6 text-white">Departments</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Cardiology</a></li>
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Neurology</a></li>
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Pediatrics</a></li>
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Emergency Care</a></li>
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Laboratory</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 text-uppercase letter-spacing-1 fs-6 text-white">Newsletter</h5>
+                    <p class="text-light opacity-75 mb-4">Subscribe to our newsletter for updates and health tips.</p>
+                    <form class="d-flex bg-white bg-opacity-10 p-1 rounded-pill overflow-hidden">
+                        <input type="email"
+                            class="form-control border-0 bg-transparent text-white placeholder-light px-3"
+                            placeholder="Email Address" aria-label="Your Email" required>
+                        <button class="btn btn-primary rounded-pill px-4 m-1" type="button"><i
+                                class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="mt-5 mb-4 border-light opacity-10">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-light opacity-50 small">&copy; 2026 MediCare Hospital. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <ul class="list-inline mb-0 small text-light opacity-50">
+                        <li class="list-inline-item"><a href="#"
+                                class="text-light text-decoration-none hover-white">Privacy Policy</a></li>
+                        <li class="list-inline-item ms-3"><a href="#"
+                                class="text-light text-decoration-none hover-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Premium Hospital Management</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="MediCare Hospital Management System ensuring premium healthcare and patient management.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="assets/images/logo.png" alt="MediCare Logo" class="nav-logo me-2">
+                <span class="fw-bold brand-text">MediCare</span>
+            </a>
+            <button class="navbar-toggler custom-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-3 py-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#doctors">Doctors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#patients">Patients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#appointments">Appointments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="d-none d-lg-block ms-lg-3">
+                    <a href="#appointments" class="btn btn-primary rounded-pill px-4" id="navBookBtn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home/Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-7 text-white hero-content">
+                    <span
+                        class="badge bg-primary text-white rounded-pill mb-3 px-3 py-2 text-uppercase letter-spacing-1 shadow-sm border border-light border-opacity-25">Premium
+                        Healthcare</span>
+                    <h1 class="display-3 fw-bold mb-4 pe-lg-5">Exceptional Care, <br>Every Single Day</h1>
+                    <p class="lead mb-5 text-light opacity-75 pe-lg-5">MediCare is dedicated to providing world-class
+                        medical services with a modern approach to patient management. Experience healthcare redefined
+                        for you and your family.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#appointments"
+                            class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg fw-medium btn-hover-effect">Book
+                            Appointment <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="#services"
+                            class="btn btn-outline-light btn-lg rounded-pill px-5 fw-medium btn-hover-effect">Our
+                            Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Cards Section -->
+    <section id="dashboard" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Overview</h6>
+                <h2 class="fw-bold display-6 mb-3">Hospital Dashboard</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-white border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-primary bg-opacity-10 text-primary mb-4 mx-auto">
+                                <i class="fas fa-user-md fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold counter mb-1 text-dark">124</h3>
+                            <p class="text-muted fw-medium mb-0">Total Doctors</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-white border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-success bg-opacity-10 text-success mb-4 mx-auto">
+                                <i class="fas fa-users fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold counter mb-1 text-dark">8,459</h3>
+                            <p class="text-muted fw-medium mb-0">Total Patients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-white border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-warning bg-opacity-10 text-warning mb-4 mx-auto">
+                                <i class="fas fa-calendar-check fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold counter mb-1 text-dark">342</h3>
+                            <p class="text-muted fw-medium mb-0">Appointments Today</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card dashboard-card bg-white border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-wrapper bg-info bg-opacity-10 text-info mb-4 mx-auto">
+                                <i class="fas fa-bed fa-2x"></i>
+                            </div>
+                            <h3 class="fw-bold counter mb-1 text-dark">56</h3>
+                            <p class="text-muted fw-medium mb-0">Available Beds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Our Specialists</h6>
+                <h2 class="fw-bold display-6 mb-3">Meet Our Doctors</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card doctor-card border-0 shadow-sm h-100 bg-white">
+                        <div class="img-container">
+                            <img src="assets/images/doctor1.png" class="card-img-top" alt="Dr. Michael Evans">
+                            <div class="social-overlay">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold mb-1">Dr. Michael Evans</h4>
+                            <p class="text-primary fw-medium mb-3">Cardiology</p>
+                            <p class="text-muted small mb-4 px-2">Expert in cardiovascular health and interventional
+                                procedures with a patient-first approach.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-4 text-muted small px-3">
+                                <span><i class="fas fa-star text-warning me-1"></i> 4.9</span>
+                                <span><i class="fas fa-briefcase me-1"></i> 15+ Yrs</span>
+                            </div>
+                            <button class="btn btn-outline-primary rounded-pill w-100 fw-medium">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card doctor-card border-0 shadow-sm h-100 bg-white">
+                        <div class="img-container">
+                            <img src="assets/images/doctor2.png" class="card-img-top" alt="Dr. Sarah Jenkins">
+                            <div class="social-overlay">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold mb-1">Dr. S. Jenkins</h4>
+                            <p class="text-primary fw-medium mb-3">Pediatrics</p>
+                            <p class="text-muted small mb-4 px-2">Dedicated pediatrician providing compassionate care
+                                for children from infancy to adolescence.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-4 text-muted small px-3">
+                                <span><i class="fas fa-star text-warning me-1"></i> 4.8</span>
+                                <span><i class="fas fa-briefcase me-1"></i> 10+ Yrs</span>
+                            </div>
+                            <button class="btn btn-outline-primary rounded-pill w-100 fw-medium">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card doctor-card border-0 shadow-sm h-100 bg-white">
+                        <div class="img-container">
+                            <img src="assets/images/doctor3.png" class="card-img-top" alt="Dr. Arthur Vance">
+                            <div class="social-overlay">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h4 class="fw-bold mb-1">Dr. Arthur Vance</h4>
+                            <p class="text-primary fw-medium mb-3">Neurology</p>
+                            <p class="text-muted small mb-4 px-2">Renowned neurologist specializing in complex
+                                neurological disorders and advanced treatments.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-4 text-muted small px-3">
+                                <span><i class="fas fa-star text-warning me-1"></i> 5.0</span>
+                                <span><i class="fas fa-briefcase me-1"></i> 20+ Yrs</span>
+                            </div>
+                            <button class="btn btn-outline-primary rounded-pill w-100 fw-medium">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Management Section -->
+    <section id="patients" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Administration</h6>
+                <h2 class="fw-bold display-6 mb-3">Patient Management</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+
+            <div class="row align-items-start g-4 g-lg-5">
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm form-card bg-white position-relative overflow-hidden">
+                        <div class="position-absolute top-0 start-0 w-100 bg-primary" style="height: 5px;"></div>
+                        <div class="card-body p-4 p-md-5">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded me-3 text-primary">
+                                    <i class="fas fa-user-plus fa-lg"></i>
+                                </div>
+                                <h4 class="fw-bold mb-0">Add New Patient</h4>
+                            </div>
+                            <form id="addPatientForm" class="needs-validation" novalidate>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="patientName" placeholder="Patient Name"
+                                        required>
+                                    <label for="patientName">Patient Name</label>
+                                    <div class="invalid-feedback">Please enter the patient's name.</div>
+                                </div>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="number" class="form-control" id="patientAge" placeholder="Age"
+                                                min="0" required>
+                                            <label for="patientAge">Age</label>
+                                            <div class="invalid-feedback">Valid age required.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="patientGender" required>
+                                                <option value="" disabled selected>Select...</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                            <label for="patientGender">Gender</label>
+                                            <div class="invalid-feedback">Select gender.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" id="patientContact"
+                                        placeholder="Contact Number" required pattern="^[0-9\-\+\s\(\)]{7,15}$">
+                                    <label for="patientContact">Contact Number</label>
+                                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="patientCondition"
+                                        placeholder="Disease / Condition" required>
+                                    <label for="patientCondition">Disease / Condition</label>
+                                    <div class="invalid-feedback">Please specify the condition.</div>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-primary w-100 rounded-pill py-3 shadow-sm fw-bold fs-6 btn-hover-effect">
+                                    <i class="fas fa-plus me-2"></i> Register Patient
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card border-0 shadow-sm h-100 table-card bg-white position-relative overflow-hidden">
+                        <div class="card-body p-4 p-md-5">
+                            <div
+                                class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+                                <h4 class="fw-bold mb-0"><i class="fas fa-users text-primary me-2"></i>Recent Patients
+                                </h4>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-middle custom-table mb-0">
+                                    <thead class="text-uppercase bg-light text-muted small fw-bold letter-spacing-1">
+                                        <tr>
+                                            <th class="ps-3 border-0 rounded-start">ID</th>
+                                            <th class="border-0">Name</th>
+                                            <th class="border-0">Age/Sex</th>
+                                            <th class="border-0">Contact</th>
+                                            <th class="border-0">Condition</th>
+                                            <th class="pe-3 border-0 rounded-end">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="patientTableBody" class="border-top-0">
+                                        <tr>
+                                            <td class="text-muted fw-medium ps-3">#PT-001</td>
+                                            <td class="fw-bold text-dark">John Doe</td>
+                                            <td class="text-muted">45/M</td>
+                                            <td class="text-muted">+1 234-567-8900</td>
+                                            <td class="text-muted">Hypertension</td>
+                                            <td class="pe-3"><span
+                                                    class="badge bg-success bg-opacity-10 text-success rounded-pill px-3 py-2 border border-success border-opacity-10 fw-medium">Admitted</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted fw-medium ps-3">#PT-002</td>
+                                            <td class="fw-bold text-dark">Jane Smith</td>
+                                            <td class="text-muted">32/F</td>
+                                            <td class="text-muted">+1 987-654-3210</td>
+                                            <td class="text-muted">Asthma</td>
+                                            <td class="pe-3"><span
+                                                    class="badge bg-warning bg-opacity-10 text-warning rounded-pill px-3 py-2 border border-warning border-opacity-10 fw-medium">Observation</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-muted fw-medium ps-3">#PT-003</td>
+                                            <td class="fw-bold text-dark">Robert Johnson</td>
+                                            <td class="text-muted">58/M</td>
+                                            <td class="text-muted">+1 555-123-4567</td>
+                                            <td class="text-muted">Diabetes</td>
+                                            <td class="pe-3"><span
+                                                    class="badge bg-info bg-opacity-10 text-info rounded-pill px-3 py-2 border border-info border-opacity-10 fw-medium">Discharged</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="appointments" class="py-5 appointment-section text-white position-relative">
+        <div class="appointment-overlay"></div>
+        <div class="container py-lg-5 position-relative z-1">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center mb-5">
+                    <span
+                        class="badge bg-white text-primary rounded-pill mb-3 px-3 py-2 fw-bold text-uppercase letter-spacing-1">Consultation</span>
+                    <h2 class="fw-bold display-5 mb-3">Book an Appointment Online</h2>
+                    <p class="lead opacity-75 mb-0">Schedule a consultation with our experts in just a few clicks. Fast,
+                        secure, and hassle-free.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10">
+                    <div class="card border-0 shadow-lg bg-white text-dark appointment-card rounded-4 overflow-hidden">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="appointmentForm" class="needs-validation" novalidate>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control bg-light border-0" id="apptName"
+                                                placeholder="Patient Name" required>
+                                            <label for="apptName"><i class="far fa-user text-primary me-2"></i>Patient
+                                                Name</label>
+                                            <div class="invalid-feedback">Please enter your name.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select bg-light border-0" id="apptDoctor" required>
+                                                <option value="" disabled selected>Choose Doctor...</option>
+                                                <option value="Dr. Michael Evans">Dr. Michael Evans - Cardiology
+                                                </option>
+                                                <option value="Dr. S. Jenkins">Dr. S. Jenkins - Pediatrics</option>
+                                                <option value="Dr. Arthur Vance">Dr. Arthur Vance - Neurology</option>
+                                            </select>
+                                            <label for="apptDoctor"><i
+                                                    class="fas fa-stethoscope text-primary me-2"></i>Select
+                                                Doctor</label>
+                                            <div class="invalid-feedback">Please select a doctor.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control bg-light border-0" id="apptDate"
+                                                placeholder="Date" required>
+                                            <label for="apptDate"><i
+                                                    class="far fa-calendar-alt text-primary me-2"></i>Preferred
+                                                Date</label>
+                                            <div class="invalid-feedback">Please choose a date.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select bg-light border-0" id="apptTime" required>
+                                                <option value="" disabled selected>Select Time Slot...</option>
+                                                <option value="09:00 AM">09:00 AM - 10:00 AM</option>
+                                                <option value="10:30 AM">10:30 AM - 11:30 AM</option>
+                                                <option value="01:00 PM">01:00 PM - 02:00 PM</option>
+                                                <option value="03:00 PM">03:00 PM - 04:00 PM</option>
+                                            </select>
+                                            <label for="apptTime"><i class="far fa-clock text-primary me-2"></i>Time
+                                                Slot</label>
+                                            <div class="invalid-feedback">Please select a time slot.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-5 text-center">
+                                        <button type="submit"
+                                            class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm w-100 fw-bold fs-5 btn-hover-effect">Confirm
+                                            Appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Departments</h6>
+                <h2 class="fw-bold display-6 mb-3">Our Premium Services</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-primary bg-opacity-10 text-primary">
+                            <i class="fas fa-ambulance fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Emergency Care</h4>
+                        <p class="text-muted mb-0">24/7 rapid response emergency medical care equipped with advanced
+                            life support systems.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-info bg-opacity-10 text-info">
+                            <i class="fas fa-microscope fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Laboratory</h4>
+                        <p class="text-muted mb-0">High-tech diagnostic laboratory delivering precise and rapid results
+                            for all tests.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-success bg-opacity-10 text-success">
+                            <i class="fas fa-pills fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Pharmacy</h4>
+                        <p class="text-muted mb-0">Fully stocked in-house pharmacy providing authentic medications round
+                            the clock.</p>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-warning bg-opacity-10 text-warning">
+                            <i class="fas fa-procedures fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Surgery</h4>
+                        <p class="text-muted mb-0">State-of-the-art operation theaters for minimally invasive and
+                            complex surgical procedures.</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="card service-card border-0 shadow-sm h-100 p-4 p-xl-5 text-center">
+                        <div class="service-icon mx-auto mb-4 bg-danger bg-opacity-10 text-danger">
+                            <i class="fas fa-heartbeat fa-2x"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3 text-dark">Intensive Care</h4>
+                        <p class="text-muted mb-0">Dedicated intensive care unit providing specialized monitoring and
+                            life-saving treatments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5 d-lg-none">
+                <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Reach Out</h6>
+                <h2 class="fw-bold display-6 mb-3">Contact Us</h2>
+                <div class="heading-underline mx-auto"></div>
+            </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 order-2 order-lg-1">
+                    <div class="d-none d-lg-block">
+                        <h6 class="text-primary text-uppercase fw-bold pb-2 letter-spacing-1">Reach Out</h6>
+                        <h2 class="fw-bold display-5 mb-4">Contact Us</h2>
+                        <div class="heading-underline mb-5"></div>
+                    </div>
+
+                    <p class="text-muted mb-5 lead fs-6">Have any questions or need immediate assistance? Get in touch
+                        with our helpdesk team available 24/7.</p>
+
+                    <div
+                        class="d-flex align-items-center mb-4 pb-2 contact-item bg-white p-3 rounded-3 shadow-sm border border-light">
+                        <div class="icon-box bg-primary bg-opacity-10 text-primary me-4 flex-shrink-0 shadow-sm">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Hospital Address</h5>
+                            <p class="text-muted mb-0 small">123 Wellness Way, Medical District<br>New York, NY 10001
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="d-flex align-items-center mb-4 pb-2 contact-item bg-white p-3 rounded-3 shadow-sm border border-light">
+                        <div class="icon-box bg-success bg-opacity-10 text-success me-4 flex-shrink-0 shadow-sm">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Emergency Phone</h5>
+                            <p class="text-muted mb-0 small">+1 (800) 123-4567<br>+1 (800) 987-6543</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="d-flex align-items-center contact-item bg-white p-3 rounded-3 shadow-sm border border-light">
+                        <div class="icon-box bg-info bg-opacity-10 text-info me-4 flex-shrink-0 shadow-sm">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1 text-dark">Email Support</h5>
+                            <p class="text-muted mb-0 small">info@medicare.com<br>support@medicare.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 order-1 order-lg-2">
+                    <div class="card border-0 shadow-lg rounded-4 overflow-hidden h-100 map-card">
+                        <!-- Google Maps Embed -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.1583091352!2d-74.11976373946231!3d40.69766374859258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1697230485608!5m2!1sen!2s"
+                            width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <div class="container pt-4">
+            <div class="row gy-5">
+                <div class="col-lg-4 col-md-6 pe-lg-5">
+                    <a class="d-flex align-items-center mb-4 text-white text-decoration-none" href="#home">
+                        <img src="assets/images/logo.png" alt="MediCare Logo" width="45" height="45"
+                            class="me-2 bg-white rounded-circle p-1 shadow-sm">
+                        <span class="fw-bold fs-3">MediCare</span>
+                    </a>
+                    <p class="text-light opacity-75 mb-4 pe-lg-4">Dedicated to providing premium healthcare services
+                        with compassion and excellence. Your health is our priority.</p>
+                    <div class="d-flex gap-3 social-icons mt-4">
+                        <a href="#" class="btn btn-outline-light rounded-circle btn-sm"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle btn-sm"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle btn-sm"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle btn-sm"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4 text-uppercase letter-spacing-1 fs-6 text-white">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-3"><a href="#home"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Home</a></li>
+                        <li class="mb-3"><a href="#doctors"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Our Doctors</a></li>
+                        <li class="mb-3"><a href="#services"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Services</a></li>
+                        <li class="mb-3"><a href="#appointments"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Book Appointment</a></li>
+                        <li class="mb-3"><a href="#contact"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 text-uppercase letter-spacing-1 fs-6 text-white">Departments</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Cardiology</a></li>
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Neurology</a></li>
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Pediatrics</a></li>
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Emergency Care</a></li>
+                        <li class="mb-3"><a href="#"><i
+                                    class="fas fa-chevron-right small text-primary me-2"></i>Laboratory</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-4 text-uppercase letter-spacing-1 fs-6 text-white">Newsletter</h5>
+                    <p class="text-light opacity-75 mb-4">Subscribe to our newsletter for updates and health tips.</p>
+                    <form class="d-flex bg-white bg-opacity-10 p-1 rounded-pill overflow-hidden">
+                        <input type="email"
+                            class="form-control border-0 bg-transparent text-white placeholder-light px-3"
+                            placeholder="Email Address" aria-label="Your Email" required>
+                        <button class="btn btn-primary rounded-pill px-4 m-1" type="button"><i
+                                class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="mt-5 mb-4 border-light opacity-10">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-light opacity-50 small">&copy; 2026 MediCare Hospital. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <ul class="list-inline mb-0 small text-light opacity-50">
+                        <li class="list-inline-item"><a href="#"
+                                class="text-light text-decoration-none hover-white">Privacy Policy</a></li>
+                        <li class="list-inline-item ms-3"><a href="#"
+                                class="text-light text-decoration-none hover-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
